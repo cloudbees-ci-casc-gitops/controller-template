@@ -3,7 +3,7 @@ removeStrategy:
   items: NONE
 items:
 - kind: folder
-  name: cbci-previews-demo
+  name: REPLACE_REPO
   groups:
   - members:
       users:
@@ -25,7 +25,7 @@ items:
     - healthReporting:
         enabled: true
     - configurationAsCode:
-        bundle: cbci-previews-demo-REPLACE_REPO
+        bundle: cloudbees-ci-casc-gitops-REPLACE_REPO
     - optOutProperty:
         securityEnforcerOptOutMode:
           authorizationOptOutMode: {
@@ -37,7 +37,7 @@ items:
         clusterEndpointId: default
         disk: 10
         storageClassName: premium-rwo
-        domain: cbci-previews-demo-REPLACE_REPO
+        domain: REPLACE_REPO
         namespace: controllers
         yaml: |
           kind: "StatefulSet"
@@ -55,19 +55,13 @@ items:
                   - name: "CONTROLLER_NAME"
                     value: "REPLACE_REPO"
                   - name: "GITHUB_ORGANIZATION"
-                    value: "cbci-previews-demo"
-                  - name: "GITHUB_USER"
-                    value: "kmadel"
-                  - name: "GITHUB_APP"
-                    value: "cloudbees-ci-previews-demo"
-                  - name: "GITHUB_APP_ID"
-                    value: ""
+                    value: "cloudbees-ci-casc-gitops"
                   - name: "CONTROLLER_SUBDOMAIN"
-                    value: "cbci-previews-demo-REPLACE_REPO"
+                    value: "REPLACE_REPO"
                   - name: "CASC_BUNDLE_ID"
-                    value: "cbci-previews-demo-REPLACE_REPO"
+                    value: "cloudbees-ci-casc-gitops-REPLACE_REPO"
                   - name: "AVAILABILITY_PATTERN"
-                    value: "cloudbees-ci-previews-demo/cbci-previews-demo/REPLACE_REPO"
+                    value: "controllers/REPLACE_REPO/REPLACE_REPO"
                   volumeMounts:
                   - name: "jcasc-secrets"
                     mountPath: "/var/jenkins_home/jcasc_secrets"
