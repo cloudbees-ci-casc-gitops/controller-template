@@ -1,0 +1,14 @@
+apiVersion: "1"
+version: "1"
+id: "cloudbees-ci-workshop-cbci-previews-demo-controller"
+description: "CloudBees CI configuration bundle for the CloudBees CI Previews Demo"
+availabilityPattern: "cloudbees-ci-previews-demo/cbci-previews-demo/REPLACE_REPO"
+parent: "rbac-base"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jcasc/"
+items:
+  - "items/"
+variables:
+  - "variables.yaml"

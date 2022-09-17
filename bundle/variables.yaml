@@ -1,0 +1,4 @@
+variables:
+- team: cbci-previews-demo
+- admin-user: kmadel-admin
+- manager-user: kmadel
