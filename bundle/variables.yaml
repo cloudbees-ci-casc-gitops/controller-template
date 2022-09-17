@@ -1,4 +1,4 @@
 variables:
-- team: cbci-previews-demo
+- team: REPLACE_REPO
 - admin-user: kmadel-admin
 - manager-user: kmadel
